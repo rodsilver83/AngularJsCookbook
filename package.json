@@ -1,0 +1,14 @@
+{
+  "name": "cookbook",
+  "version": "1.0.0",
+  "description": "Angular cookbook recepies",
+  "main": "index.js",
+  "author": "",
+  "devDependencies": {
+    "angular": "^1.4.1",
+    "bootstrap": "^3.3.5",
+    "connect-livereload": "^0.5.3",
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
