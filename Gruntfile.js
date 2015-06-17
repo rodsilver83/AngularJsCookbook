@@ -1,23 +1,39 @@
 /**
  * Created by jose.soria on 06/16/2015.
  */
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
-    // Project configuration.
-    grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
-        watch: {
-            css: {
-                files: '**/*.sass',
-                tasks: ['sass'],
-                options: {
-                    livereload: true,
-                },
-            },
-        }
-    });
+	// Project configuration.
+	grunt.initConfig({
+		pkg: grunt.file.readJSON('package.json'),
+		watch: {
+			options: {
+				livereload: true
+			},
+			html: {
+				files: '**/*.html'
+			},
+			js: {
+				files: '**/*.js'
+			}
+		},
+		connect: {
+			server: {
+				options: {
+					livereload: true,
+					open: {
+						target: 'http://localhost:8000/Cap1'
+					}
+				}
+			}
+		}
+	});
 
-    // Load the plugin that provides the "uglify" task.
-    grunt.loadNpmTasks('grunt-contrib-watch');
+	// Load the plugin that provides the "uglify" task.
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-connect');
+
+	grunt.registerTask('server', "Serve your app", [
+		'connect:server', 'watch']);
 
 };

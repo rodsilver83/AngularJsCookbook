@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="../../node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+
+</head>
+<body>
+
+<!-- specify root element of application -->
+<div ng-app="myApp">
+	<!-- register 'my-template.html' with $templateCache -->
+	<script type="text/ng-template" id="my-template.html">
+		<div ng-repeat="num in [1,2,3,4,5]">{{ num }}</div>
+	</script>
+
+	<!-- your custom element -->
+	<my-directive></my-directive>
+
+</div>
+
+
+
+</body>
+</html>
