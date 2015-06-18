@@ -26,4 +26,16 @@ angular.module('myApp', [])
 				$log.log(attrs.someAttr);
 			}
 		}
+	})
+	.directive('classDirective', function($log){
+		return {
+			restrict: 'C',
+			template: '<p>A class directive</p>',
+			link: function(scope,el,attrs){
+				$log.log(el.html());
+				$log.log(el.hasClass('normal-class'));
+				$log.log(attrs.classDirective);
+				$log.log(attrs.someAttr);
+			}
+		}
 	});

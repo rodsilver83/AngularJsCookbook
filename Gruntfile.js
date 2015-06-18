@@ -15,6 +15,9 @@ module.exports = function (grunt) {
 			},
 			js: {
 				files: '**/*.js'
+			},
+			css: {
+				files: '**/*.css'
 			}
 		},
 		connect: {
