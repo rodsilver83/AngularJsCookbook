@@ -38,4 +38,20 @@ angular.module('myApp', [])
 				$log.log(attrs.someAttr);
 			}
 		}
+	})
+	.directive('commentDirective', function ($log) {
+		return {
+			restrict: 'M',
+			// without replace: true, the template cannot
+			// be inserted into the DOM
+			replace: true,
+			template: '<p>A comment directive</p>',
+			link: function(scope, el, attrs) {
+				$log.log(el.html())
+				// <p>A comment directive</p>
+				$log.log(attrs.commentDirective)
+				// 'val1 val2 val3'
+			}
+		};
 	});
+

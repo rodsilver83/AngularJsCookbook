@@ -25,7 +25,8 @@ module.exports = function (grunt) {
 				options: {
 					livereload: true,
 					open: {
-						target: 'http://localhost:8000/Cap1'
+						target: 'http://localhost:8000/Cap1',
+						appName: 'Firefox',
 					}
 				}
 			}

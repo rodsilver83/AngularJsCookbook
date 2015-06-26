@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Working through the directive spectrum</title>
+
+	<script type="text/javascript" src="../../node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+<div ng-app="myApp">
+	<div ng-controller="MainCtrl">
+		<my-directive>
+			<p>HTML template</p>
+			<p>Scope from {{origin}}</p>
+			<p>Overwritten? {{overwrite}}</p>
+		</my-directive>
+	</div>
+</div>
+
+</body>
+</html>

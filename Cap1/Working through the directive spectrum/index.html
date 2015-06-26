@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Working through the directive spectrum</title>
+    <meta charset="UTF-8">
+    <title>Working through the directive spectrum</title>
 
-	<link rel="stylesheet" href="app.css" type="text/css"/>
+    <link rel="stylesheet" href="app.css" type="text/css"/>
 
-	<script type="text/javascript" src="../../node_modules/angular/angular.min.js"></script>
-	<script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="../../node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 </head>
 <body>
 <div ng-app="myApp">
-	<element-directive some-attr="myvalue">
-		<!-- directive´s HTML contents -->
-	</element-directive>
+    <element-directive some-attr="myvalue">
+        <!-- directive´s HTML contents -->
+    </element-directive>
 
-	<div attribute-directive="aval" some-attr="myvalue"></div>
+    <div attribute-directive="aval" some-attr="myvalue"></div>
 
-	<div class="class-directive: cval; normal-class" some-attr="myvalue">
-	</div>
+    <div class="class-directive: cval; normal-class" some-attr="myvalue">
+    </div>
+
+    <!-- directive: comment-directive val1 val2 val3 -->
 </div>
 </body>
 </html>
