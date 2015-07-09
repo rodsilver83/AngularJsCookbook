@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Working through the directive spectrum</title>
+
+	<script type="text/javascript" src="../../node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+	<div ng-app="myApp">
+		<div ng-controller="MainCtrl">
+			<tree val="data"></tree>
+		</div>
+
+		<script type="text/ng-template" id="recursive.html">
+			<span>{{ val.text }}</span>
+			<button ng-click="deleteSubtree()">delete</button>
+			<ul ng-if="isParent" style="margin-left:30px">
+				<li ng-repeat="item in val.items">
+					<tree val="item" parent-data="val.items"></tree>
+				</li>
+			</ul>
+		</script>
+	</div>
+
+</body>
+</html>

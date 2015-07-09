@@ -1,0 +1,16 @@
+.animated-container {
+    padding: 20px;
+    border: 5px solid black;
+}
+.animated-container.ng-hide-add,
+.animated-container.ng-hide-remove {
+    transition: all linear 1s;
+}
+.animated-container.ng-hide-remove,
+.animated-container.ng-hide-add.ng-hide-add-active {
+    opacity: 0;
+}
+.animated-container.ng-hide-add,
+.animated-container.ng-hide-remove.ng-hide-remove-active {
+    opacity: 1;
+}

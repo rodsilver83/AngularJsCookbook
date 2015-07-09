@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Working through the directive spectrum</title>
+
+	<script type="text/javascript" src="../../node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+<div ng-app="myApp">
+	<div ng-controller="Ctrl">
+		<p>{{data.unix | date : "EEEE 'at' H:mma" }}</p>
+		<p>{{data.iso | date : "longDate" }}</p>
+		<p>{{data.date | date : "M/d H:m:s.sss"}}</p>
+	</div>
+</div>
+</body>
+</html>

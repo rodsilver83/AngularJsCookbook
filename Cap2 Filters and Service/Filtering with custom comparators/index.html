@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Working through the directive spectrum</title>
+
+	<script type="text/javascript" src="../../node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+<div ng-app="myApp">
+	<div ng-controller="Ctrl">
+		<input ng-model="search.$" required/>
+		<input ng-model="search.number" required/>
+		<p ng-repeat="user in users | filter:search:true">
+			{{ user.firstName }} {{ user.lastName }} {{ user.number }}
+		</p>
+	</div>
+</div>
+</body>
+</html>

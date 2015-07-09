@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Working through the directive spectrum</title>
+
+	<script type="text/javascript" src="../../node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+<div ng-app="myApp">
+	<div ng-controller="Ctrl">
+		<p>{{data.text | lowercase }}</p>
+		<p>{{data.nums | lowercase }}</p>
+		<p>{{data.specialChars | uppercase }}</p>
+		<p>_{{data.whitespace | uppercase }}_</p>
+	</div>
+</div>
+</body>
+</html>
