@@ -1,0 +1,14 @@
+.container {
+    overflow: hidden;
+}
+.slide-tile {
+    transition:all 0.5s ease-in-out;
+    width:300px;
+    line-height:300px;
+    text-align:center;
+    border: 1px solid black;
+    transform: translateY(0);
+}
+.slide-up {
+    transform: translateY(-100%);
+}

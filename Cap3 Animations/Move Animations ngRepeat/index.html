@@ -11,6 +11,18 @@
 	<link rel="stylesheet" href="animations.css">
 </head>
 <body>
+	<div ng-app="myApp">
+		<div ng-controller="Ctrl">
+			<div style="repeat-container">
+				<input ng-model="search.val" />
+				<button ng-click="shuffle()">Shuffle</button>
+				<div ng-repeat="el in arr | filter:search.val"
+						 class="animate-container">
+					<span>{{ el }}</span>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>

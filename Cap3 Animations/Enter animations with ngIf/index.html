@@ -11,6 +11,12 @@
 	<link rel="stylesheet" href="animations.css">
 </head>
 <body>
+	<div ng-app="myApp">
+		<div ng-controller="Ctrl">
+			<button ng-click="visible=!visible">Toggle</button>
+			<span class="target" ng-if="visible">Bring me in!</span>
+		</div>
+	</div>
 
 </body>
 </html>

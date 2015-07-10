@@ -1,0 +1,99 @@
+.animate-container {
+    position:relative;
+    margin-bottom:-1px;
+    width: 300px;
+    text-align:center;
+    border:1px solid black;
+    line-height:40px;
+}
+.repeat-container {
+    position:absolute;
+}
+.animate-container.ng-enter {
+    animation: 0.5s item-enter;
+    -webkit-animation: 0.5s item-enter;
+}
+.animate-container.ng-leave {
+    animation: 0.5s item-leave;
+    -webkit-animation: 0.5s item-leave;
+}
+.animate-container.ng-move {
+    animation: 0.5s item-move;
+    -webkit-animation: 0.5s item-move;
+}
+@keyframes item-enter {
+    0% {
+        max-height:0;
+        left:-300px;
+    }
+    50% {
+        max-height:40px;
+        left: -300px;
+    }
+    100%  {
+        max-height:40px;
+        left: 0px;
+    }
+}
+@keyframes item-leave {
+    0% {
+        left: 0px;
+        max-height:40px;
+    }
+    50% {
+        left: -300px;
+        max-height:40px;
+    }
+    100% {
+        left: -300px;
+        max-height:0;
+    }
+}
+@keyframes item-move {
+    0% {
+        opacity:0;
+        max-height:0px;
+    }
+    100% {
+        opacity:1;
+        max-height:40px;
+    }
+}
+@-webkit-keyframes item-enter {
+    0% {
+        max-height:0;
+        left:-300px;
+    }
+    50% {
+        max-height:40px;
+        left: -300px;
+    }
+    100% {
+        max-height:40px;
+        left: 0px;
+    }
+}
+@-webkit-keyframes item-leave {
+    0% {
+        left: 0px;
+        max-height:40px;
+    }
+    50% {
+        left: -300px;
+        max-height:40px;
+    }
+    100% {
+        left: -300px;
+        max-height:0;
+    }
+}
+@-webkit-keyframes item-move {
+    0% {
+        opacity:0;
+        max-height:0px;
+    }
+    100% {
+        opacity:1;
+        max-height:40px;
+    }
+}

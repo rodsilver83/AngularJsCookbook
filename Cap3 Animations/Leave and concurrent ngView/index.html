@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Working through the directive spectrum</title>
+
+	<script type="text/javascript" src="../../node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="../../node_modules/angular-animate/angular-animate.js"></script>
+	<script type="text/javascript" src="../../node_modules/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+
+	<link rel="stylesheet" href="animations.css">
+</head>
+<body>
+	<div ng-app="myApp">
+		<ng-view class="animate-container"></ng-view>
+		<div class="link-container">
+			<a href="#/foo">Foo</a>
+			<a href="#/bar">Bar</a>
+		</div>
+
+		<script type="text/ng-template" id="foo.html">
+			<div>
+				<span>Foo</span>
+			</div>
+		</script>
+		<script type="text/ng-template" id="bar.html">
+			<div>
+				<span>Bar</span>
+			</div>
+		</script>
+	</div>
+
+</body>
+</html>

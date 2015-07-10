@@ -1,0 +1,28 @@
+.link-container {
+    position:absolute;
+    top:320px;
+}
+.animate-container {
+    position:absolute;
+}
+.animate-container div {
+    width:300px;
+    text-align:center;
+    line-height:300px;
+    border:1px solid black;
+}
+.animate-container.ng-enter {
+    /* final value is the transition delay */
+    transition:all 0.5s 0.5s;
+}
+.animate-container.ng-leave {
+    transition:all 0.5s;
+}
+.animate-container.ng-enter,
+.animate-container.ng-leave.ng-leave-active {
+    top:-300px;
+}
+.animate-container.ng-leave,
+.animate-container.ng-enter.ng-enter-active {
+    top:0px;
+}

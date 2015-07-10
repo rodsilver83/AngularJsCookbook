@@ -11,6 +11,15 @@
 	<link rel="stylesheet" href="animations.css">
 </head>
 <body>
+	<div ng-app="myApp">
+		<div ng-controller="Ctrl">
+			<input ng-model="search" />
+			<div ng-repeat="name in names | filter:search"
+					 class="container">
+				{{ name }}
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>

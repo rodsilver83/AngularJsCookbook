@@ -11,6 +11,19 @@
 	<link rel="stylesheet" href="animations.css">
 </head>
 <body>
+	<div ng-app="myApp">
+		<div ng-controller="Ctrl">
+			<button ng-click="displayToggle=!displayToggle">
+				Toggle Visibility
+			</button>
+			<div class="container">
+				<div class="slide-tile"
+						 ng-class="{'slide-up': !displayToggle}">
+					Slide me up and down!
+				</div>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>
